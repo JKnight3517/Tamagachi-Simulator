@@ -8,12 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		6701F23F2264E799001ECC5F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6701F23E2264E799001ECC5F /* AppDelegate.swift */; };
-		6701F2412264E799001ECC5F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6701F2402264E799001ECC5F /* ViewController.swift */; };
+		6701F2412264E799001ECC5F /* TamagachiViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6701F2402264E799001ECC5F /* TamagachiViewController.swift */; };
 		6701F2442264E799001ECC5F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6701F2422264E799001ECC5F /* Main.storyboard */; };
 		6701F2462264E79A001ECC5F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6701F2452264E79A001ECC5F /* Assets.xcassets */; };
 		6701F2492264E79A001ECC5F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6701F2472264E79A001ECC5F /* LaunchScreen.storyboard */; };
 		6701F2542264E79A001ECC5F /* CatSimulatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6701F2532264E79A001ECC5F /* CatSimulatorTests.swift */; };
 		6701F25F2264E79A001ECC5F /* CatSimulatorUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6701F25E2264E79A001ECC5F /* CatSimulatorUITests.swift */; };
+		6701F26D226605E9001ECC5F /* SelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6701F26C226605E9001ECC5F /* SelectionViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +37,7 @@
 /* Begin PBXFileReference section */
 		6701F23B2264E799001ECC5F /* CatSimulator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CatSimulator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6701F23E2264E799001ECC5F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6701F2402264E799001ECC5F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6701F2402264E799001ECC5F /* TamagachiViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TamagachiViewController.swift; sourceTree = "<group>"; };
 		6701F2432264E799001ECC5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6701F2452264E79A001ECC5F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6701F2482264E79A001ECC5F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +48,7 @@
 		6701F25A2264E79A001ECC5F /* CatSimulatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CatSimulatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		6701F25E2264E79A001ECC5F /* CatSimulatorUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CatSimulatorUITests.swift; sourceTree = "<group>"; };
 		6701F2602264E79A001ECC5F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6701F26C226605E9001ECC5F /* SelectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectionViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +100,8 @@
 			isa = PBXGroup;
 			children = (
 				6701F23E2264E799001ECC5F /* AppDelegate.swift */,
-				6701F2402264E799001ECC5F /* ViewController.swift */,
+				6701F2402264E799001ECC5F /* TamagachiViewController.swift */,
+				6701F26C226605E9001ECC5F /* SelectionViewController.swift */,
 				6701F2422264E799001ECC5F /* Main.storyboard */,
 				6701F2452264E79A001ECC5F /* Assets.xcassets */,
 				6701F2472264E79A001ECC5F /* LaunchScreen.storyboard */,
@@ -256,7 +259,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6701F2412264E799001ECC5F /* ViewController.swift in Sources */,
+				6701F2412264E799001ECC5F /* TamagachiViewController.swift in Sources */,
+				6701F26D226605E9001ECC5F /* SelectionViewController.swift in Sources */,
 				6701F23F2264E799001ECC5F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

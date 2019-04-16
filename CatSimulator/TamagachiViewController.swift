@@ -8,29 +8,27 @@
 
 import UIKit
 
-// TODO:
-//1. make sure current behavior is okay. See if there is a better way for the switch statement to be managed
-//2. Add a first view controller that allows the selection of four different pets
-//3. Create classes for each pet and implement them here
-//4. Add a history table view for how well you did
-//5. Add another option other than treats given and pets given
-//6. Add diminishing returns and UI that shows that when a user gives too many of any one item
-//7. Add a timer that a user has to respond to
 
-
-class InitialViewController: UIViewController {
+class TamagachiViewController: UIViewController {
     var hoursAlive = 0
     var petsGiven = 0
     var treatsGiven = 0
     let hourAliveString = "Hours Alive: "
-    let emojiArray = ["😻","😹","😼","🙀","😾"]
+    var emojiArray = [String]()
+    let catEmojiArray =  ["😻","😹","😼","🙀","😾",]
+    let monkeyEmojiArray = ["🐵","🙉","🐒","🙊","🙈"]
     var angerLevel = 0
+    var didChooseCat = true
     
     @IBOutlet weak var emojiTextView: UITextView!
     @IBOutlet weak var hourAliveTextView: UITextView!
     override func viewDidLoad() {
         super.viewDidLoad()
+        if didChooseCat {
+            emojiArray = catEmojiArray
+        } else { emojiArray = monkeyEmojiArray}
         // Do any additional setup after loading the view.
+        emojiTextView.text = emojiArray[0]
     }
     @IBAction func hourButtonPressed(_ sender: Any) {
         hoursAlive += 1

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="85U-kb-BgN">
     <device id="retina6_1" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -10,10 +10,58 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Initial View Controller-->
+        <!--Selection View Controller-->
+        <scene sceneID="2W2-NX-NZZ">
+            <objects>
+                <viewController id="85U-kb-BgN" customClass="SelectionViewController" customModule="CatSimulator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="QgR-Uy-3Qf">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="WRq-UB-H9L">
+                                <rect key="frame" x="0.0" y="5" width="414" height="896"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="uCr-Hc-lU3">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="448"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="150"/>
+                                        <state key="normal" title="😻"/>
+                                        <connections>
+                                            <action selector="catButtonPressed:" destination="85U-kb-BgN" eventType="touchUpInside" id="wbd-ai-m4G"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zvj-G2-TP6">
+                                        <rect key="frame" x="0.0" y="448" width="414" height="448"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="150"/>
+                                        <state key="normal" title="🐵"/>
+                                        <connections>
+                                            <action selector="monkeyButtonPressed:" destination="85U-kb-BgN" eventType="touchUpInside" id="k7Z-Ji-EOM"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="WRq-UB-H9L" firstAttribute="width" secondItem="QgR-Uy-3Qf" secondAttribute="width" id="Q62-JD-Y1l"/>
+                            <constraint firstItem="WRq-UB-H9L" firstAttribute="height" secondItem="QgR-Uy-3Qf" secondAttribute="height" id="rX7-de-HMz"/>
+                            <constraint firstItem="WRq-UB-H9L" firstAttribute="centerX" secondItem="Lr5-NK-ChE" secondAttribute="centerX" id="tJJ-gY-7gc"/>
+                            <constraint firstItem="WRq-UB-H9L" firstAttribute="centerY" secondItem="Lr5-NK-ChE" secondAttribute="centerY" id="zRX-6B-4rC"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Lr5-NK-ChE"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="LPV-0Z-X9m"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="animalSelected" id="qLA-rA-bT6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ikK-7x-xp1" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="205.79710144927537" y="20.758928571428569"/>
+        </scene>
+        <!--Tamagachi View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="InitialViewController" customModule="CatSimulator" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="TamagachiViewController" customModule="CatSimulator" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -26,10 +74,10 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E7m-wI-Bub">
-                                <rect key="frame" x="0.0" y="802" width="414" height="30"/>
+                                <rect key="frame" x="52" y="797" width="310.5" height="35"/>
                                 <color key="backgroundColor" red="0.45700987310000002" green="0.86322176399999995" blue="0.70987681449999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="PdJ-ie-VKW"/>
+                                    <constraint firstAttribute="height" constant="35" id="PdJ-ie-VKW"/>
                                 </constraints>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="Wait an hour"/>
@@ -47,27 +95,15 @@
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9wh-kU-1bV">
-                                <rect key="frame" x="0.0" y="684" width="414" height="30"/>
+                                <rect key="frame" x="31" y="674" width="145" height="35"/>
                                 <color key="backgroundColor" red="0.45700987310000002" green="0.86322176399999995" blue="0.70987681449999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="UF9-W4-XCS"/>
+                                    <constraint firstAttribute="height" constant="35" id="UF9-W4-XCS"/>
                                 </constraints>
                                 <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <state key="normal" title="Pet"/>
                                 <connections>
                                     <action selector="petButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qbe-N9-yFM"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMb-rD-BvA">
-                                <rect key="frame" x="0.0" y="738" width="414" height="30"/>
-                                <color key="backgroundColor" red="0.45700987310000002" green="0.86322176399999995" blue="0.70987681449999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="e0U-L8-amw"/>
-                                </constraints>
-                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                <state key="normal" title="Feed"/>
-                                <connections>
-                                    <action selector="feedButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XcO-Kx-W9Q"/>
                                 </connections>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Cat Simulator 3000" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZMG-Zf-apz">
@@ -79,6 +115,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMb-rD-BvA">
+                                <rect key="frame" x="238" y="674" width="145" height="35"/>
+                                <color key="backgroundColor" red="0.45700987310000002" green="0.86322176399999995" blue="0.70987681449999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="35" id="e0U-L8-amw"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Feed"/>
+                                <connections>
+                                    <action selector="feedButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XcO-Kx-W9Q"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -86,17 +134,17 @@
                             <constraint firstItem="E7m-wI-Bub" firstAttribute="top" secondItem="9wh-kU-1bV" secondAttribute="bottom" constant="88" id="8vX-oh-l93"/>
                             <constraint firstItem="9co-KC-lf1" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="D0S-Ci-1Ya"/>
                             <constraint firstItem="E7m-wI-Bub" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="DBz-AJ-SXd"/>
-                            <constraint firstItem="JMb-rD-BvA" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="DKy-b2-lLq"/>
-                            <constraint firstItem="9wh-kU-1bV" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="FcG-hf-Zvg"/>
+                            <constraint firstItem="JMb-rD-BvA" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.35" id="DKy-b2-lLq"/>
+                            <constraint firstItem="9wh-kU-1bV" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.35" id="FcG-hf-Zvg"/>
                             <constraint firstItem="9co-KC-lf1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Rmu-lr-nNP"/>
                             <constraint firstItem="ZMG-Zf-apz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Uoq-V8-9RI"/>
                             <constraint firstItem="9co-KC-lf1" firstAttribute="top" secondItem="ZMG-Zf-apz" secondAttribute="bottom" constant="8" id="ZhG-BG-Ics"/>
                             <constraint firstItem="ZMG-Zf-apz" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="eQm-1o-hTZ"/>
+                            <constraint firstItem="JMb-rD-BvA" firstAttribute="top" secondItem="9wh-kU-1bV" secondAttribute="top" id="fD4-5p-X3x"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="E7m-wI-Bub" secondAttribute="bottom" constant="30" id="hpr-o0-mDZ"/>
-                            <constraint firstItem="E7m-wI-Bub" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="i9p-XJ-Nww"/>
-                            <constraint firstItem="JMb-rD-BvA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="q0G-MW-XYm"/>
-                            <constraint firstItem="9wh-kU-1bV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="sjb-M9-eJ7"/>
-                            <constraint firstItem="JMb-rD-BvA" firstAttribute="top" secondItem="9wh-kU-1bV" secondAttribute="bottom" constant="24" id="zKO-YO-ekD"/>
+                            <constraint firstItem="E7m-wI-Bub" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.75" id="i9p-XJ-Nww"/>
+                            <constraint firstItem="JMb-rD-BvA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" multiplier="1.5" id="q0G-MW-XYm"/>
+                            <constraint firstItem="9wh-kU-1bV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" multiplier="0.5" id="sjb-M9-eJ7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
@@ -107,6 +155,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="957.97101449275374" y="20.758928571428569"/>
         </scene>
     </scenes>
 </document>
