@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Initial View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="InitialViewController" customModule="CatSimulator" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" text="😻" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="jhP-LY-wyp">
+                                <rect key="frame" x="87" y="384" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="123"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="E7m-wI-Bub">
+                                <rect key="frame" x="0.0" y="802" width="414" height="30"/>
+                                <color key="backgroundColor" red="0.45700987310000002" green="0.86322176399999995" blue="0.70987681449999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="PdJ-ie-VKW"/>
+                                </constraints>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Wait an hour"/>
+                                <connections>
+                                    <action selector="hourButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Sx9-ur-sQn"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Hours Alive: 0" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="9co-KC-lf1">
+                                <rect key="frame" x="103.5" y="204" width="207" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="KR5-YQ-I3C"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9wh-kU-1bV">
+                                <rect key="frame" x="0.0" y="684" width="414" height="30"/>
+                                <color key="backgroundColor" red="0.45700987310000002" green="0.86322176399999995" blue="0.70987681449999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="UF9-W4-XCS"/>
+                                </constraints>
+                                <color key="tintColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <state key="normal" title="Pet"/>
+                                <connections>
+                                    <action selector="petButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="qbe-N9-yFM"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JMb-rD-BvA">
+                                <rect key="frame" x="0.0" y="738" width="414" height="30"/>
+                                <color key="backgroundColor" red="0.45700987310000002" green="0.86322176399999995" blue="0.70987681449999995" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="e0U-L8-amw"/>
+                                </constraints>
+                                <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Feed"/>
+                                <connections>
+                                    <action selector="feedButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="XcO-Kx-W9Q"/>
+                                </connections>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Cat Simulator 3000" textAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ZMG-Zf-apz">
+                                <rect key="frame" x="103.5" y="166" width="207" height="30"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Her-7c-6ZP"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="9co-KC-lf1" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="160" id="6Xk-Hd-hg0"/>
+                            <constraint firstItem="E7m-wI-Bub" firstAttribute="top" secondItem="9wh-kU-1bV" secondAttribute="bottom" constant="88" id="8vX-oh-l93"/>
+                            <constraint firstItem="9co-KC-lf1" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="D0S-Ci-1Ya"/>
+                            <constraint firstItem="E7m-wI-Bub" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="DBz-AJ-SXd"/>
+                            <constraint firstItem="JMb-rD-BvA" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="DKy-b2-lLq"/>
+                            <constraint firstItem="9wh-kU-1bV" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="FcG-hf-Zvg"/>
+                            <constraint firstItem="9co-KC-lf1" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Rmu-lr-nNP"/>
+                            <constraint firstItem="ZMG-Zf-apz" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Uoq-V8-9RI"/>
+                            <constraint firstItem="9co-KC-lf1" firstAttribute="top" secondItem="ZMG-Zf-apz" secondAttribute="bottom" constant="8" id="ZhG-BG-Ics"/>
+                            <constraint firstItem="ZMG-Zf-apz" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" multiplier="0.5" id="eQm-1o-hTZ"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="E7m-wI-Bub" secondAttribute="bottom" constant="30" id="hpr-o0-mDZ"/>
+                            <constraint firstItem="E7m-wI-Bub" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" id="i9p-XJ-Nww"/>
+                            <constraint firstItem="JMb-rD-BvA" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="q0G-MW-XYm"/>
+                            <constraint firstItem="9wh-kU-1bV" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="sjb-M9-eJ7"/>
+                            <constraint firstItem="JMb-rD-BvA" firstAttribute="top" secondItem="9wh-kU-1bV" secondAttribute="bottom" constant="24" id="zKO-YO-ekD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="emojiTextView" destination="jhP-LY-wyp" id="ktH-83-KND"/>
+                        <outlet property="hourAliveTextView" destination="9co-KC-lf1" id="igI-9G-nht"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
